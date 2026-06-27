@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxfiy Sahifa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="password"] {
+            width: 80%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            text-align: center;
+        }
+        input[type="password"]:focus {
+            border-color: #ff4b5c;
+        }
+        button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #e03e4d;
+        }
+        #secret-content {
+            display: none;
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .gallery-item {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .gallery-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .gallery-item img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .gallery-item p {
+            font-size: 16px;
+            color: #444;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        .heart {
+            color: #ff4b5c;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="password-box" class="container">
+        <h2>Парольды жаз Жаным ❤🔐</h2>
+        <input type="password" id="password-input" placeholder="Parolni kiriting...">
+        <br>
+        <button onclick="checkPassword()">Kirish</button>
+    </div>
+
+    <div id="secret-content">
+        <h2>Siz uchun maxsus sahifa <span class="heart">❤</span></h2>
+        <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
+            Колдан келгенше ыследым Жаным ❤😘.
+        </p>
+        
+        <div class="gallery">
+            
+            <div class="gallery-item">
+                <img src="rasm1.jpg" alt="Rasm 1">
+                <p>Усы суретын ды Журместен алдын Видеодан скреншот етып Корып отратын едым 😅❤</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="rasm2.jpg" alt="Rasm 2">
+                <p>Бул козлерге Кунде ашыкпан Телефон нын Обойына коип алдым даже 😁❤ </p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="rasm3.jpg" alt="Rasm 3">
+                <p>Бул суретке аитар гапым жок Сулусан жаным ❤😘</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="rasm4.jpg" alt="Rasm 4">
+                <p>Бырге тускен фотомыз болуды калеймен жаным ❤</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var input = document.getElementById("password-input").value;
+            if (input === "20260616") {
+                document.getElementById("password-box").style.display = "none";
+                document.getElementById("secret-content").style.display = "block";
+            } else {
+                alert("Кате❌ Ойлан жаным 😁");
+            }
+        }
+    </script>
+</body>
+</html>
