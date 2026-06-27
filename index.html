@@ -4,42 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxfiy Sahifa</title>
+    <title>Moya Lyubov</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
         }
         .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
+            background-color: #ffffff;
+            border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
             text-align: center;
-            max-width: 400px;
-            width: 100%;
+            margin: 20px;
         }
         h2 {
-            color: #333;
-            margin-bottom: 20px;
+            color: #ff4b5c;
+            margin-bottom: 10px;
+        }
+        .heart {
+            color: #ff4b5c;
+            font-size: 24px;
+        }
+        .password-section {
+            margin-top: 20px;
         }
         input[type="password"] {
-            width: 80%;
             padding: 12px;
-            margin-bottom: 20px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
+            width: 80%;
+            border: 2px solid #ffb3b3;
+            border-radius: 25px;
             outline: none;
-            transition: border-color 0.3s;
+            font-size: 16px;
             text-align: center;
+            transition: 0.3s;
         }
         input[type="password"]:focus {
             border-color: #ff4b5c;
@@ -48,103 +54,115 @@
             background-color: #ff4b5c;
             color: white;
             border: none;
-            padding: 12px 25px;
+            padding: 12px 30px;
             font-size: 16px;
-            border-radius: 8px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: background 0.3s;
+            margin-top: 15px;
+            transition: 0.3s;
+            width: 85%;
         }
         button:hover {
             background-color: #e03e4d;
         }
-        #secret-content {
+        .secret-content {
             display: none;
-            max-width: 500px;
-            width: 100%;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
+            margin-top: 20px;
+        }
+        .gallery {
+            margin-top: 30px;
         }
         .gallery-item {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        .gallery-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+            margin-bottom: 35px;
+            background: #fff0f0;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
         .gallery-item img {
             width: 100%;
-            max-width: 350px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
         }
         .gallery-item p {
             font-size: 16px;
             color: #444;
-            margin-top: 15px;
+            margin-top: 12px;
             line-height: 1.5;
+            font-weight: 500;
         }
-        .heart {
+        .ending-text {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff0f0;
+            border-radius: 15px;
+            border: 2px dashed #ff4b5c;
+        }
+        .ending-text p {
+            font-size: 20px;
             color: #ff4b5c;
-            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <div id="password-box" class="container">
-        <h2>Парольды жаз Жаным ❤🔐</h2>
-        <input type="password" id="password-input" placeholder="Parolni kiriting...">
+<div class="container">
+    <div id="password-box" class="password-section">
+        <h2>Sahifaga kirish <span class="heart">❤</span></h2>
+        <p style="color: #666; font-size: 14px;">Iltimos, maxsus parolni kiriting:</p>
+        <input type="password" id="password-input" placeholder="Parolni yozing...">
         <br>
         <button onclick="checkPassword()">Kirish</button>
     </div>
 
-    <div id="secret-content">
+    <div id="secret-content" class="secret-content">
         <h2>Siz uchun maxsus sahifa <span class="heart">❤</span></h2>
         <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
             Колдан келгенше ыследым Жаным ❤😘.
         </p>
-        
+
         <div class="gallery">
-            
             <div class="gallery-item">
-                <img src="rasm1.jpg" alt="Rasm 1">
-                <p>Усы суретын ды Журместен алдын Видеодан скреншот етып Корып отратын едым 😅❤</p>
+                <img src="Rasm1.jpg" alt="Rasm 1">
+                <p>Усы суретын ды Журместен алдын Видеодан скреншот етып Койып алганман</p>
             </div>
 
             <div class="gallery-item">
-                <img src="rasm2.jpg" alt="Rasm 2">
-                <p>Бул козлерге Кунде ашыкпан Телефон нын Обойына коип алдым даже 😁❤ </p>
+                <img src="Rasm2.jpg" alt="Rasm 2">
+                <p>Бул козлерге Кунде ашыкпан Телефон нын Обойына коип алдым</p>
             </div>
 
             <div class="gallery-item">
-                <img src="rasm3.jpg" alt="Rasm 3">
-                <p>Бул суретке аитар гапым жок Сулусан жаным ❤😘</p>
+                <img src="Rasm3.jpg" alt="Rasm 3">
+                <p>Бул суретке айтар гапым жок Сулусан жаным ❤😘</p>
             </div>
 
             <div class="gallery-item">
-                <img src="rasm4.jpg" alt="Rasm 4">
+                <img src="Rasm4.jpg" alt="Rasm 4">
                 <p>Бырге тускен фотомыз болуды калеймен жаным ❤</p>
             </div>
+        </div>
 
+        <div class="ending-text">
+            <p>Сены жаксы коремен жаным сол ❤ Хар дайым бырге болайык 📌</p>
         </div>
     </div>
+</div>
 
-    <script>
-        function checkPassword() {
-            var input = document.getElementById("password-input").value;
-            if (input === "20260616") {
-                document.getElementById("password-box").style.display = "none";
-                document.getElementById("secret-content").style.display = "block";
-            } else {
-                alert("Кате❌ Ойлан жаным 😁");
-            }
-        }
-    </script>
+<script>
+function checkPassword() {
+    var input = document.getElementById("password-input").value;
+    if (input === "20260616") {
+        document.getElementById("password-box").style.display = "none";
+        document.getElementById("secret-content").style.display = "block";
+    } else {
+        alert("Кате❌ Ойлан жаным 😉");
+    }
+}
+</script>
+
 </body>
 </html>
